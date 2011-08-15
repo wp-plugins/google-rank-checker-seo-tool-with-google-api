@@ -24,7 +24,7 @@ Major new features in Google Rank Checker - SEO Tool with Google API 1.2.1 inclu
 
 PS: You'll need an [Google API key] and a [Google Adwords Account] in order to use it properly.
 
-http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html </br>
+http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html </br></br>
 Support and Questions - https://optimum7.wufoo.com/forms/google-rank-checker-support/
 
 == Installation ==
