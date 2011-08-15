@@ -1,5 +1,5 @@
 === Google Rank Checker - SEO Tool with Google API ===
-Contributors: jbeaujardin
+Contributors: optimum7, jbeaujardin
 Tags: google api, seo api, adwords api, rank checker, keyword position, keyword ranking, seo tool, ranking tool
 Requires at least: 3.0
 Tested up to: 3.2
