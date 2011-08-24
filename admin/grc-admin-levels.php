@@ -21,7 +21,7 @@
             <form method="post" action=""> 
             <input type='hidden' name='grc_menu_add_level' value='add_level' /><input type="hidden" name="action" value="" />
             <input type="hidden" id="_wpnonce" name="_wpnonce" value="" />
-            <input type="hidden" name="_wp_http_referer" value="/wp-content/plugins/optimum7-google-ranking-checker/admin/grc-admin-levels.php" /> 
+            <input type="hidden" name="_wp_http_referer" value="/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/admin/grc-admin-levels.php" /> 
                 <table class="form-table"> 
                     <tr valign="top"> 
                     <th scope="row"><label for="optimum7_google_ranking_checker_levels">Levels:</label></th> 

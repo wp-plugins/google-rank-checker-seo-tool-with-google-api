@@ -190,7 +190,7 @@
                   <form method="post" action=""> 
                     <input type='hidden' name='optimum7_ranking_checker_settings_page' value='settings' /><input type="hidden" name="action" value="" />
                     <input type="hidden" id="_wpnonce" name="_wpnonce" value="" />
-                    <input type="hidden" name="_wp_http_referer" value="/wp-content/plugins/optimum7-google-ranking-checker/admin/grc-keyword-settings.php" /> 
+                    <input type="hidden" name="_wp_http_referer" value="/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/admin/grc-keyword-settings.php" /> 
                 	<p class="submit"><input type="submit" name="submit" id="submit" class="button-primary" value="Refresh data" <? if (!sizeof($array_keywords)>0) echo 'disabled="disabled"';?>/></p>
                   </form>                    
                   <span class="description">Every time that refreshes, it connects to Google Adwords API to update data and Google will charge you for that.</span>

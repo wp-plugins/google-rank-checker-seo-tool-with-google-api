@@ -64,7 +64,7 @@
 
     		<input type="hidden" id="_wpnonce" name="_wpnonce" value="" />
 
-    		<input type="hidden" name="_wp_http_referer" value="/wp-content/plugins/optimum7-google-ranking-checker/admin/grc-admin-keyword-add.php" /> 
+    		<input type="hidden" name="_wp_http_referer" value="/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/admin/grc-admin-keyword-add.php" /> 
 
             <table class="form-table"> 
 

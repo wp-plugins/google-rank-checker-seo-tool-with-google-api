@@ -47,11 +47,11 @@
 		$file = GRC_PLUGINPATH;
 		wp_enqueue_script('jquery');
 		wp_enqueue_script( 'jquery-ui-tabs' );
-		echo '<link type="text/css" rel="stylesheet" href="' .get_bloginfo('wpurl') .'/wp-content/plugins/optimum7-google-ranking-checker/css/style.css" />' . "\n";
-		echo '<link type="text/css" rel="stylesheet" href="' .get_bloginfo('wpurl') .'/wp-content/plugins/optimum7-google-ranking-checker/css/buttons.css" />' . "\n";
-		echo '<link type="text/css" rel="stylesheet" href="' .get_bloginfo('wpurl') .'/wp-content/plugins/optimum7-google-ranking-checker/css/ui-lightness/jquery-ui-1.8.12.custom.css" />' . "\n";
-		echo '<script type="text/javascript" src="' .get_bloginfo('wpurl') .'/wp-content/plugins/optimum7-google-ranking-checker/include/js/jquery-latest.js" /></script>' . "\n";
-		echo '<script type="text/javascript" src="' .get_bloginfo('wpurl') .'/wp-content/plugins/optimum7-google-ranking-checker/include/js/jquery.tablesorter.js" /></script>' . "\n";	
+		echo '<link type="text/css" rel="stylesheet" href="' .get_bloginfo('wpurl') .'/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/css/style.css" />' . "\n";
+		echo '<link type="text/css" rel="stylesheet" href="' .get_bloginfo('wpurl') .'/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/css/buttons.css" />' . "\n";
+		echo '<link type="text/css" rel="stylesheet" href="' .get_bloginfo('wpurl') .'/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/css/ui-lightness/jquery-ui-1.8.12.custom.css" />' . "\n";
+		echo '<script type="text/javascript" src="' .get_bloginfo('wpurl') .'/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/include/js/jquery-latest.js" /></script>' . "\n";
+		echo '<script type="text/javascript" src="' .get_bloginfo('wpurl') .'/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/include/js/jquery.tablesorter.js" /></script>' . "\n";	
 	 }
 
  	 /********************************************************************************************************************/	
@@ -110,7 +110,7 @@
 			  echo '<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>';
 			  echo '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>';
 			  echo '<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>';
-			  add_menu_page ('GRC_Keywords', 'SEO Keywords', 8, 'grc_keywords', array('_google_ranking_checker','grc_menu_keywords'), '/wp-content/plugins/optimum7-google-ranking-checker/images/icon.ico');
+			  add_menu_page ('GRC_Keywords', 'SEO Keywords', 8, 'grc_keywords', array('_google_ranking_checker','grc_menu_keywords'), '/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/images/icon.ico');
 			  add_submenu_page('grc_keywords', "Add_New", "Add new keyword", 8, 'grc_addnew', array('_google_ranking_checker','grc_menu_add_new')); 
 			  add_submenu_page('grc_keywords', "Levels", "Add new Level", 8, 'grc_levels', array('_google_ranking_checker','grc_menu_add_level')); 
 			  add_submenu_page('grc_keywords', "Settings", "Settings", 8, 'grc_settings', array('_google_ranking_checker','grc_menu_settings')); 

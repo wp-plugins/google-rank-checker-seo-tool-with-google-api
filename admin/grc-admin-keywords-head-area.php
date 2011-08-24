@@ -109,7 +109,7 @@
 		<div class="bnc-clearer"></div>
         <div id="news-support" class="clearfix">
         	<div id="banner-support">			
-            	<a href="http://www.optimum7.com?utm_source=RankCheckPlugin"><img src="<? echo get_bloginfo('wpurl').'/wp-content/plugins/optimum7-google-ranking-checker/images/opt7-logo.png"'?>" width="413" height="80"/></a>
+            	<a href="http://www.optimum7.com?utm_source=RankCheckPlugin"><img src="<? echo get_bloginfo('wpurl').'/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/images/opt7-logo.png"'?>" width="413" height="80"/></a>
         	</div>
             <ul>
            <?
