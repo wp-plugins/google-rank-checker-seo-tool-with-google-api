@@ -29,6 +29,13 @@ PS: You'll need an [Google API key] and a [Google Adwords Account] in order to u
 
 Support and Questions - https://optimum7.wufoo.com/forms/google-rank-checker-support/
 
+== Screenshots ==
+
+1. Settings Page.
+2. Adding seo keywords.
+3. Admin results.
+4. Public view
+
 == Installation ==
 Upload the Google Rank Checker - SEO Tool with Google API plugin to your blog, Activate it and define a Google AdWords Account.
 
