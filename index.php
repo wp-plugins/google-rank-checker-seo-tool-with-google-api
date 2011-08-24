@@ -5,7 +5,7 @@
 	 Plugin Name: Google Rank Checker - SEO Tool with Google API
 	 Plugin URI: http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html
 	 Description: Provides the estimated Google position for a keyword and corresponding URL. It also provides the competitive pages for any pre-defined keyword list on a keyword for keyword basis.This plugin is an SEO-tool using the 2011 Google API
-	 Version: 1.2.1
+	 Version: 2.0.3
 	 Author: Optimum7
 	 Author URI: http://www.optimum7.com/
 	
@@ -112,6 +112,7 @@
 			  echo '<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>';
 			  add_menu_page ('GRC_Keywords', 'SEO Keywords', 8, 'grc_keywords', array('_google_ranking_checker','grc_menu_keywords'), '/wp-content/plugins/optimum7-google-ranking-checker/images/icon.ico');
 			  add_submenu_page('grc_keywords', "Add_New", "Add new keyword", 8, 'grc_addnew', array('_google_ranking_checker','grc_menu_add_new')); 
+			  add_submenu_page('grc_keywords', "Levels", "Add new Level", 8, 'grc_levels', array('_google_ranking_checker','grc_menu_add_level')); 
 			  add_submenu_page('grc_keywords', "Settings", "Settings", 8, 'grc_settings', array('_google_ranking_checker','grc_menu_settings')); 
 		  }
 
@@ -122,6 +123,12 @@
 		 function grc_menu_add_new(){
 			require(GRC_PLUGINPATH . '/admin/grc-admin-keyword-add.php');
 		 }	
+		 
+		  
+		 function grc_menu_add_level()
+		 {
+			require(GRC_PLUGINPATH . '/admin/grc-admin-levels.php');
+		 }
 
 		 function grc_menu_settings() {
 			require(GRC_PLUGINPATH . '/admin/grc-admin-keyword-settings.php');
@@ -163,6 +170,7 @@
 			}
 
 			function install(){
+				//TODO: LOAD OPTIONS BY DEFAULT:
 			} 
 
 			/* * The uninstallation function */

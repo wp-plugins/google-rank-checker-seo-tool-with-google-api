@@ -1,8 +1,8 @@
 === Google Rank Checker - SEO Tool with Google API ===
-Contributors: optimum7, jbeaujardin
+Contributors: jbeaujardin
 Tags: google api, seo api, adwords api, rank checker, keyword position, keyword ranking, seo tool, ranking tool
 Requires at least: 3.0
-Tested up to: 3.2
+Tested up to: 3.2.1
 Stable tag: 2.5.3
 License: GPLv2 or later
 
@@ -21,13 +21,15 @@ Major new features in Google Rank Checker - SEO Tool with Google API 1.2.1 inclu
 * Two different views to show results.
 * 2011 Google API
 * New keywords can be added dynamically.
+* Customized levels for keywords
 
 PS: You'll need an [Google API key] and a [Google Adwords Account] in order to use it properly.
 
-http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html </br></br>
+<a href"http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html?utm_source=RankCheckPlugin">Google Rank Checker - SEO Tool with Google API</a>
+
 Support and Questions - https://optimum7.wufoo.com/forms/google-rank-checker-support/
 
 == Installation ==
-Upload the Google Rank Checker - SEO Tool with Google API plugin to your blog, Activate it and define a Google AdWords.
+Upload the Google Rank Checker - SEO Tool with Google API plugin to your blog, Activate it and define a Google AdWords Account.
 
 1, 2, 3: You're done!

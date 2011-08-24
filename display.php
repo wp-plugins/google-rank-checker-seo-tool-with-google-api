@@ -94,6 +94,7 @@
                                     <th scope="col" style="text-align:center;">Position</th>                                 
                                     <th scope="col" style="text-align:center;">Competing Pages</th>          
                                     <th scope="col" style="text-align:center;">Cost per Click</th>
+                                    <th scope="col" style="text-align:center;">Level</th>
                                     <th scope="col" style="text-align:center;"> Annual Traffic Value</th>
                                 </tr>
                             </thead>
@@ -141,6 +142,7 @@
 													echo money_format('%.2n',  $keyword->_averageCpc);
                                             	}?>
                                             </td>
+                                            <td class="col-position" style="text-align:center"><?php echo $keyword->_level->_level; ?></td>
 											<? $keyword->_total_Yearly_Traffic_Value = $keyword->_averageCpc*$keyword->_globalMonthlySearches*$annual_times;?>
                                             <td style="text-align:center">
                                             <?

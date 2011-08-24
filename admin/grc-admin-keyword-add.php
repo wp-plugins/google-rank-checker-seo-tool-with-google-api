@@ -2,17 +2,13 @@
 
 	$keywords = '';	
 
-	if($_POST['submit'] == 'Save Keywords')
-
-	{
+	if($_POST['submit'] == 'Save Keywords'){
 
 			$keywords = explode(';', $_POST['optimum7_google_ranking_checker_keywords']);
 
 			$words= array();			
 
-			foreach ($keywords as $key => $value)
-
-			{
+			foreach ($keywords as $key => $value){
 
 				$split_keyword = explode(',', $value);
 
@@ -32,17 +28,13 @@
 
             update_option('optimum7_google_ranking_checker_keywords_added', true);
 
-			if ($duplicates>0)
-
-			{
+			if ($duplicates>0){
 
 				?><div class="updated"><p><strong><?php _e('Keywords saved. But you have duplicated keywords' ); ?></strong></p></div><?	
 
 			}
 
-			else
-
-			{
+			else{
 
 				?><div class="updated"><p><strong><?php _e('Keywords saved.' ); ?></strong></p></div><?		
 
@@ -50,9 +42,7 @@
 
 	}
 
-	else
-
-	{
+	else{
 
 		$keywords = get_option('optimum7_google_ranking_checker_keywords');
 
@@ -108,9 +98,7 @@
 
 					$page = $_GET['start'];
 
-					if ((!$page) || (is_numeric($page) == false) || ($page < 0))
-
-					{
+					if ((!$page) || (is_numeric($page) == false) || ($page < 0)){
 
 						$page = 1; //default	
 
@@ -126,17 +114,13 @@
 
 					$total_pages = ceil($total_item / $limit);					
 
-					if ($total_item == 0)
-
-					{
+					if ($total_item == 0){
 
 						$content_start = 0;
 
 					}
 
-					else
-
-					{
+					else{
 
 						$content_start = $set_limit +1;
 
@@ -148,37 +132,27 @@
 
 					$end_page = (($start_page+9)<$total_pages)?($start_page+9):$total_pages;
 
- 					if ($total_pages > 1)
-
-					{ ?>
+ 					if ($total_pages > 1){ ?>
 
                     	<div style="padding-top:10px;">
 
                             <strong><span>Page <?php echo $page;?> of <?php echo $total_pages; ?> - </span></strong> <?php
 
-                            if ($page != 1)
-
-                            { ?>
+                            if ($page != 1){ ?>
 
                                 <a href="admin.php?page=grc_addnew&start=<?=$prev_page?>"><<</a> <?php
 
                             }
 
-                            for ($count=1; $count<=$total_pages; $count++)
+                            for ($count=1; $count<=$total_pages; $count++){
 
-                            {
-
-                                if ($count == $page)
-
-                                { ?>
+                                if ($count == $page){ ?>
 
                                     <span><?php echo $count; ?></span> <?php
 
                                 }
 
-                                else
-
-                                {?>
+                                else {?>
 
                                     <a href="admin.php?page=grc_addnew&start=<?=$count?>" ><?php echo $count; ?></a> <?php
 
@@ -186,9 +160,7 @@
 
                             }
 
-                            if ($page != $total_pages)
-
-                            { ?>
+                            if ($page != $total_pages){ ?>
 
                                 <a href="admin.php?page=grc_addnew&start=<?php echo $next_page; ?>">>></a> <?php
 
@@ -238,20 +210,13 @@
 
                                 $counter = 1;
 
-                                foreach ($keywords as $key => $value)
-
-                                {
+                                foreach ($keywords as $key => $value){
 
                                     $split_keyword = explode(',', $value);
 
-                                    if ($counter>=$content_start && $counter<=$content_end)
+                                    if ($counter>=$content_start && $counter<=$content_end){
 
-                                    {
-
-										if (!empty($split_keyword[0]))
-
-										{
-
+										if (!empty($split_keyword[0])){
 											?>           
 
 										   <tr>

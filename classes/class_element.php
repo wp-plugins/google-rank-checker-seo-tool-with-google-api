@@ -15,7 +15,8 @@ class element{
 	public $_url;
 	public $_results;
 	public $_date;
-	public  $_competingPage;
+	public $_level;	
+	public $_competingPage;
 }
 
 class elementSorter{

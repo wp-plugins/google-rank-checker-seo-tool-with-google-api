@@ -92,6 +92,7 @@
                                 <th style="text-align:right">Estimated Daily Cost</th>
                                 <th style="text-align:right">Clicks per month</th>
                                 <th style="text-align:right">Monthly Potential Traffic</th>
+                                <th style="text-align:right">Level</th>
                                 <th style="text-align:right">Annual Traffic Value</th>
                             </tr>
                         </thead>
@@ -108,6 +109,7 @@
                                 <th style="text-align:right">Estimated Daily Cost</th>
                                 <th style="text-align:right">Clicks per month</th>
                                 <th style="text-align:right">Monthly Potential Traffic</th>
+                                <th style="text-align:right">Level</th>
                                 <th style="text-align:right">Annual Traffic Value</th>
                             </tr>
                        </tfoot>
@@ -165,6 +167,7 @@
                             <?
                              }
 							 ?>
+                             <td style="text-align:center"><?php echo $keyword->_level->_level; ?></td>
                             <? $min_annual = get_option('optimum7_google_ranking_checker_min_annual');?>
                             <? $keyword->_total_Yearly_Traffic_Value = $keyword->_averageCpc *$keyword->_globalMonthlySearches*$annual_times;?>
                              <td style="width:80px; text-align:right;">

@@ -2,6 +2,7 @@
 require_once(GRC_PLUGINPATH. '/classes/google/Api/Ads/AdWords/Lib/AdWordsUser.php');
 require_once(GRC_PLUGINPATH. '/classes/google/Api/Ads/Common/Util/MapUtils.php');
 require_once(GRC_PLUGINPATH . '/classes/class_element.php');
+require_once(GRC_PLUGINPATH . '/classes/level.php');
 
 class functions{
 	public $Keywords_dictionary;	
@@ -40,6 +41,7 @@ class functions{
 						$tmp_keyword->_position = $value->_position;
 						$tmp_keyword->_url = $value->_url;		
 						$tmp_keyword->_results = $value->_results;
+						$tmp_keyword->_level= $this->getLevel($tmp_keyword->_page);
 						$tmp_keyword->_competingPage = $value->_competingPage;
 						$tmp_keyword->_total_Yearly_Traffic_Value = $value->_total_Yearly_Traffic_Value;
 						if ($_isForPublicViewers==false || $tmp_keyword->_page<get_option('optimum7_google_ranking_checker_max_page')){
@@ -225,7 +227,8 @@ class functions{
 				  $current_keyword->_globalMonthlySearches =$array_averageMonthlySearches[$i];
 				  $current_keyword->_results= $this->getResults(trim($current_keyword->_string));
 				  $current_keyword->_total_Yearly_Traffic_Value = (((($current_keyword->_averageCpc/1000000) * $current_keyword->_globalMonthlySearches) *$annual_times)); 
-
+				  $current_keyword->_level= $this->getLevel($current_keyword->_page);
+				  
  				  if ($_searchPosition==true){
 					  $found = false;
 					  $x = 0;
@@ -290,6 +293,33 @@ class functions{
 	public function getResults($search){
 			$results = json_decode( file_get_contents( 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&q=' . urlencode( $search ).'&key='.$google_API) );
 			return $results->responseData->cursor->estimatedResultCount;
+	}
+	
+	public function getLevel($_results){
+		if(!$_results)
+		  $_results = 0;
+		  
+		$levels = get_option('optimum7_google_ranking_checker_levels');
+		$levels = explode(';', $levels); 
+		
+		$_results = intval($_results);
+		
+		 foreach ($levels as $key => $value){
+			$split_level = explode(',', $value);
+			$level=new level();
+			$level->_level=$split_level[2];
+			$level->_initial=$split_level[0];
+			$level->_final=$split_level[1];
+			
+			if ((!$level->_final)|| $level->_final==0)
+				$level->_final=99999999999;
+			
+			if (($_results>=intval($level->_initial)) && ($_results<=intval($level->_final)))
+			{
+				return $level;
+				break;
+			}
+		}
 	}
 }
 ?>
