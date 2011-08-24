@@ -5,7 +5,7 @@
 	 Plugin Name: Google Rank Checker - SEO Tool with Google API
 	 Plugin URI: http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html
 	 Description: Provides the estimated Google position for a keyword and corresponding URL. It also provides the competitive pages for any pre-defined keyword list on a keyword for keyword basis.This plugin is an SEO-tool using the 2011 Google API
-	 Version: 2.0.3
+	 Version: 2.0.5
 	 Author: Optimum7
 	 Author URI: http://www.optimum7.com/
 	
