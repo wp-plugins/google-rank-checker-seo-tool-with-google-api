@@ -14,14 +14,14 @@ Google Rank Checker - SEO Tool with Google API is a WordPress plugin that provid
 Let's say for instance that you want to provide clients with data showing the competitiveness of keywords they want to rank for. To obtain the data, enter the desired keywords and corresponding URLS; then leave the rest to the plugin. What better way to demonstrate to your clients and prospective clients excellent Google ranking accuracy and instantaneous information.
 This plugin is an SEO-tool using the 2011 Google API. A Google AdWords account (MCC Account) is needed in order to properly use this plugin.
 
-Major new features in Google Rank Checker - SEO Tool with Google API 1.2.1 include:
+Major new features in Google Rank Checker - SEO Tool with Google API 2.0.5 include:
 
 * Rules to define: Maximum CPC, The top Google page, Min Cost Per Click, etc.
 * Google Adwords Account
 * Two different views to show results.
 * 2011 Google API
 * New keywords can be added dynamically.
-* Customized levels for keywords
+* Customized levels for keywords (new)
 
 PS: You'll need an [Google API key] and a [Google Adwords Account] in order to use it properly.
 
