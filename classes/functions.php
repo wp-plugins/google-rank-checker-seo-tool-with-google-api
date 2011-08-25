@@ -596,7 +596,7 @@ class functions{
 			{
 				$result ='';
 				
-				if ($allow_url_fopen==0)
+				if ($allow_url_fopen==1)
 				{
 					$xmlDoc = new DOMDocument();
 					$xmlDoc->load($xml);
