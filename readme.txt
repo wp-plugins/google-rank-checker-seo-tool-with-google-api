@@ -30,7 +30,7 @@ This plugin is an SEO-tool using the 2011 Google API. A Google AdWords account (
 
 
 
-Major new features in Google Rank Checker - SEO Tool with Google API 2.0.5 include:
+Major new features in Google Rank Checker - SEO Tool with Google API 3.0.0 include:
 
 
 
