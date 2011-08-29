@@ -12,7 +12,7 @@
 
 	 Description: Provides the estimated Google position for a keyword and corresponding URL. It also provides the competitive pages for any pre-defined keyword list on a keyword for keyword basis.This plugin is an SEO-tool using the 2011 Google API
 
-	 Version: 3.0.0
+	 Version: 3.0.1
 
 	 Author: Optimum7
 
