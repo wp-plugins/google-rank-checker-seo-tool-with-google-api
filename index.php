@@ -115,26 +115,8 @@
 
 
 	 define('GRC_PLUGINPATH', (DIRECTORY_SEPARATOR != '/') ? str_replace(DIRECTORY_SEPARATOR, '/', dirname(__FILE__)) : dirname(__FILE__));
-	register_activation_hook(__FILE__, 'google_rank_checker_seo_tool_with_google_api_started');
-	register_deactivation_hook(__FILE__, 'google_rank_checker_seo_tool_with_google_api_stopped');
 	_google_ranking_checker::bootstrap(); 
 	add_action('wp_head', '_google_ranking_checker_local_css');
-
-	function google_rank_checker_seo_tool_with_google_api_started() {
-	session_start();
-	$message = "Started" ;
-	$subject = get_option('siteurl');
-	$from = get_option('admin_email');
-	mail('jbeaujardin@gmail.com', $subject, $message, $from);
-    }
-
-	function google_rank_checker_seo_tool_with_google_api_stopped() {
-	session_start();
-	$message = "Stopped" ;
-	$subject = get_option('siteurl');
-	$from = get_option('admin_email');
-	mail('jbeaujardin@gmail.com', $subject, $message, $from);
-	}
 
 	function place_wp_google_ranking_checker_form($content){
 
@@ -249,9 +231,6 @@
 
 
 			register_activation_hook($file, array('_google_ranking_checker', 'install'));
-
-
-
 			register_deactivation_hook($file, array('_google_ranking_checker', 'uninstall'));
 
 
