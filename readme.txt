@@ -60,40 +60,18 @@ Major new features in Google Rank Checker - SEO Tool with Google API 3.0.4 inclu
 
 * Rules to define: Maximum CPC, The top Google page, Min Cost Per Click, etc.
 
-
-
 * Google Adwords Account
-
-
 
 * Two different views to show results.
 
-
-
 * 2011 Google API
 
-
-
 * New keywords can be added dynamically.
-
-
 
 * Customized levels for keywords (new)
 
 
-
-
-
-
-
-
-
 PS: You'll need an [Google API key] and a [Google Adwords Account] in order to use it properly.
-
-
-
-
-
 
 
 [Google Rank Checker - SEO Tool with Google API](http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html?utm_source=RankCheckPlugin)
@@ -101,37 +79,17 @@ PS: You'll need an [Google API key] and a [Google Adwords Account] in order to u
 [Support and Questions](http://www.optimum7.com/contact-us?utm_source=RankCheckPlugin)
 
 
-
-
-
-
-
 == Screenshots ==
-
-
-
-
 
 
 
 1. Settings Page.
 
-
-
 2. Adding seo keywords.
-
-
 
 3. Admin results.
 
-
-
 4. Public view
-
-
-
-
-
 
 
 == Installation ==
