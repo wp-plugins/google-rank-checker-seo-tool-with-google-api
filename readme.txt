@@ -32,9 +32,7 @@ License: GPLv2 or later
 
 Google Rank Checker - SEO Tool with Google API provides the estimated Google position for a keyword and corresponding URL.
 
-
-
-
+[Google Rank Checker - SEO Tool with Google API](http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html?utm_source=RankCheckPlugin)
 
 
 
@@ -108,10 +106,9 @@ PS: You'll need an [Google API key] and a [Google Adwords Account] in order to u
 
 
 
-[Google Rank Checker - SEO Tool with Google API] (http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html?utm_source=RankCheckPlugin)
+[Google Rank Checker - SEO Tool with Google API](http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html?utm_source=RankCheckPlugin)
 
-
-[Support and Questions] (http://www.optimum7.com/contact-us?utm_source=RankCheckPlugin)
+[Support and Questions](http://www.optimum7.com/contact-us?utm_source=RankCheckPlugin)
 
 
 
