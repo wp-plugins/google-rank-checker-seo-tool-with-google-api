@@ -1,5 +1,5 @@
-<?
-interface IEquatable {
-	public function Equals($object);
-}
+<?
+interface IEquatable {
+	public function Equals($object);
+}
 ?>
