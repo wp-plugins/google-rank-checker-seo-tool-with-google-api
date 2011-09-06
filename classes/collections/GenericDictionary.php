@@ -1,7 +1,7 @@
 <?
 
 require_once('Dictionary.php');
-require_once(GRC_PLUGINPATH. '/classes/generics/Type.php');
+require_once(OPT7_GRC_PLUGINPATH. '/classes/generics/Type.php');
 
 class GenericDictionary extends Dictionary implements IGeneric {
 	protected $keyType;

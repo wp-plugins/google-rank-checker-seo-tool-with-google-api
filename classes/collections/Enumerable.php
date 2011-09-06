@@ -1,7 +1,7 @@
 <?
-require_once(GRC_PLUGINPATH. '/classes/collections/config.php');
-require_once(GRC_PLUGINPATH. '/classes/exceptionsManager/ExceptionsManager.php');
-require_once(GRC_PLUGINPATH. '/classes/generics/IEquatable.php');
+require_once(OPT7_GRC_PLUGINPATH. '/classes/collections/config.php');
+require_once(OPT7_GRC_PLUGINPATH. '/classes/exceptionsManager/ExceptionsManager.php');
+require_once(OPT7_GRC_PLUGINPATH. '/classes/generics/IEquatable.php');
 
 abstract class Enumerable implements IteratorAggregate {
 	protected $array;
