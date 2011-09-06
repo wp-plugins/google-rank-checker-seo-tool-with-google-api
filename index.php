@@ -5,7 +5,7 @@
     Description: Provides the estimated Google position for a keyword and corresponding URL. It also provides the competitive pages for any pre-defined keyword list on a keyword for keyword basis.This plugin is an SEO-tool using the 2011 Google API
     Version: 4.0.0
     Author: Optimum7
-    Author URI: http://www.optimum7.com/
+    Author URI: http://www.optimum7.com/?utm_source=RankCheckPlugin
     Copyright 2011  Optimum7 Inc  (email : julian@optimum7.com)
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
