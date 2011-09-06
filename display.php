@@ -1,13 +1,11 @@
-<? require_once(GRC_PLUGINPATH . '/classes/collections/GenericDictionary.php');?>
-<? require_once(GRC_PLUGINPATH . '/classes/functions.php');?>
+<? require_once(OPT7_GRC_PLUGINPATH . '/classes/collections/GenericDictionary.php');?>
+<? require_once(OPT7_GRC_PLUGINPATH . '/classes/functions.php');?>
 <? get_header();?>
-
 <script type="text/javascript">  
-  $(document).ready(function() { 	
+	$(document).ready(function() { 	
    	jQuery.tablesorter.addParser({id: "commaDigit",is: function(s, table) { var c = table.config; return jQuery.tablesorter.isDigit(s.replace(/,/g, ""), c);}, format: function(s) {return jQuery.tablesorter.formatFloat(s.replace(/,/g, ""));},type: "numeric"});
 	$("#tablesorter").tablesorter({sortList:[[3,1],[1,0],[2,0]], widgets: ['zebra'],  headers: {5:{sorter:'numeric'},3: {sorter:'commaDigit'}}});});
 </script>
-
 <? 
     try{ 
     	$functions = new functions();
@@ -20,7 +18,7 @@
 		$myString = get_option('optimum7_google_ranking_checker_keywords');
 		$keywords = explode(';', $myString);
 		$annual_times = get_option('optimum7_google_ranking_checker_annual_times');
-		$keywords= $functions->Get_Keywords(false,$keywords,true,true);
+		$keywords= $functions->Get_Keywords(false,$keywords,true,true, "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']);
 		
 		$array = array();
 		if(empty($keywords)){
@@ -95,11 +93,11 @@
                                     <th scope="col" style="text-align:center;">Competing Pages</th>          
                                     <th scope="col" style="text-align:center;">Cost per Click</th>
                                     <th scope="col" style="text-align:center;">Level</th>
-                                    <th scope="col" style="text-align:center;"> Annual Traffic Value</th>
+                                    <th scope="col" style="text-align:center;">Annual Traffic Value</th>
                                 </tr>
                             </thead>
                             <tbody>     
-                            <? 
+                           <? 
 						    $counter = 1;
 							$PosAve =0;
 								foreach ( $aKeywords as &$keyword){
@@ -132,7 +130,7 @@
 													echo number_format($keyword->_competingPage, 0, '.', ',');
                                             	}?>
                                             </td>
-                                            <? $min_cost_click = get_option('optimum7_google_ranking_checker_min_cost_click');?>
+                                           <? $min_cost_click = get_option('optimum7_google_ranking_checker_min_cost_click');?>
 											<td style="text-align:center"><?php if ($keyword->_averageCpc/1000000 < $min_cost_click){
 												$keyword->_averageCpc = $min_cost_click;
 						 						echo  money_format('%.2n',  $keyword->_averageCpc);
@@ -148,7 +146,6 @@
                                             <?
 												$total= $keyword->_total_Yearly_Traffic_Value; 
 													echo  money_format('%.2n', $total);
-
 											?>	
                                             </td>
 										</tr>  
@@ -161,10 +158,10 @@
                     </div>
 	        <? 
 		}?>
-        
-       	<? if (get_option('optimum7_google_ranking_checker_backlink')==1){?>
+       
+      	<? if (get_option('optimum7_google_ranking_checker_backlink')==1){?>
  		 <!-- we have release this plugin for public uses, we just need you to keep the following link (url) to our site, thanks.-->
-        <p style="font-size:10px;margin: 25px 0 0 30px;">Copyright &copy; 2011 <a href="http://optimum7.com?utm_source=RankCheckPlugin" title="Optimum7 - Internet Marketing Services"><span style="text-decoration:none;color:#000;">Internet Marketing Services</span></a> by Optimum7</p>
+        <p style="font-size:10px;margin: 25px 0 0 30px;">Copyright &copy; 2011 <a href="http://optimum7.com?utm_source=<? echo OPT7_GRC_UTM_SOURCE_CODE;?>" title="Optimum7 - Internet Marketing Services"><span style="text-decoration:none;color:#000;">Internet Marketing Services</span></a> by Optimum7</p>
 		<? }?>
 		<?	
 	}

@@ -23,11 +23,9 @@ class elementSorter{
 	function ComparisonDelegateByGlobalMonthlySearches($a, $b){
 		return self::ComparisonDelegate($a, $b, "_globalMonthlySearches");
 	}
-
 	function ComparisonDelegateByCompetingPages($a, $b){
 		return self::ComparisonDelegate($a,$b, "_competingPage");
 	}
-
 	function ComparisonDelegate($a, $b, $field){
 		if ($a->$field == $b->$field) {
 			return 0;
