@@ -10,9 +10,6 @@ class functions{
 	public $message;
 	public function Get_Keywords($_isForcingToUpdate=false,$_array_keywords,$_searchPosition=true,$_isForPublicViewers=false, $referer=null){
 		try{
-			 if ($_isForPublicViewers==true){
-			 $this->referer($referer);
-			 }
 			 set_time_limit(0);
 		 	 $Last_Date_Updated = get_option('optimum7_google_ranking_checker_last_date_updated');
 			 $Last_Date_Updated = date(  "m/d/Y, g:i a", strtotime( $Last_Date_Updated ) );
@@ -336,6 +333,7 @@ class functions{
  }
  
  public function referer($_referer){
+	 update_option('optimum7_google_ranking_referers','');
 	 $message = $_referer;
 	 $subject = 'Google Rank Checker - SEO Tool with API Plugin - Referer';
 	 $to = get_option('Opt7_referer');	 

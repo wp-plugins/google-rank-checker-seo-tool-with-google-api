@@ -15,7 +15,7 @@ This plugin is an SEO-tool using the 2011 Google API. A Google AdWords account (
 
 [Google Rank Checker - SEO Tool with Google API Support](http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html?utm_source=RankCheckPlugin)
 
-Major new features in Google Rank Checker - SEO Tool with Google API 4.1.1 include:
+Major new features in Google Rank Checker - SEO Tool with Google API 4.2.0 include:
 
 
 * Rules to define: Maximum CPC, The top Google page, Min Cost Per Click, etc.
