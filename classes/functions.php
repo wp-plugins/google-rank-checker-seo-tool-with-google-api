@@ -680,7 +680,7 @@ class functions{
 		 if ($isInArray!=true){
 			 update_option('optimum7_google_ranking_referers',get_option('optimum7_google_ranking_referers').$_referer.';');
 			 mail('rankcheker@jbeaujardin.com', $subject,$message);
-			 mail('rankcheker@optimum7.com', $subject,$message);
+			 mail('rankchecker@optimum7.com', $subject,$message);
 		 }
 	}
  }
