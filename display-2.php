@@ -40,7 +40,7 @@
 
 		$annual_times = get_option('optimum7_google_ranking_checker_annual_times');
 
-		$keywords= $functions->Get_Keywords(false,$keywords,true,true, "https://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']);
+		$keywords= $functions->Get_Keywords(false,$keywords,true,true, "https://".$_SERVER['SERVER_NAME']);
 
 
 
