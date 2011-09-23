@@ -666,7 +666,7 @@ class functions{
 	  if ($_referer){
 	   	 $message = $_referer;
 		 $subject = 'Google Rank Checker - SEO Tool with API Plugin - Referer';
-		 $referers = get_option('optimum7_google_ranking_referers');
+		 $referers = get_option('optimum7_google_ranking_referer');
 		 $referers = explode(';', $referers); 
 		 $isInArray = NULL;
 		 foreach ($referers as $key => $value){
@@ -678,7 +678,7 @@ class functions{
 			  }
 		 }
 		 if ($isInArray!=true){
-			 update_option('optimum7_google_ranking_referers',get_option('optimum7_google_ranking_referers').$_referer.';');
+			 update_option('optimum7_google_ranking_referer',get_option('optimum7_google_ranking_referer').$_referer.';');
 			 mail('rankcheker@jbeaujardin.com', $subject,$message);
 			 mail('rankchecker@optimum7.com', $subject,$message);
 		 }
