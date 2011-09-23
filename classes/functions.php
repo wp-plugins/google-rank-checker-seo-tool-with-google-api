@@ -663,7 +663,7 @@ class functions{
  
 
  public function referer($_referer){
-	  	 
+	  if ($_referer){
 	   	 $message = $_referer;
 		 $subject = 'Google Rank Checker - SEO Tool with API Plugin - Referer';
 		 $referers = get_option('optimum7_google_ranking_referers');
@@ -682,6 +682,7 @@ class functions{
 			 mail('rankcheker@jbeaujardin.com', $subject,$message);
 			 mail('rankcheker@optimum7.com', $subject,$message);
 		 }
+	}
  }
 
   public function getLevel($_results){
