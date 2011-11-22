@@ -15,9 +15,7 @@ This plugin is an SEO-tool using the 2011 Google API. A Google AdWords account (
 
 [Google Rank Checker - SEO Tool with Google API Support](http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html?utm_source=RankCheckPlugin)
 
-Major new features in Google Rank Checker - SEO Tool with Google API 4.6.0 include:
-
-
+Major new features in Google Rank Checker - SEO Tool with Google API 5.0.0 include:
 * Rules to define: Maximum CPC, The top Google page, Min Cost Per Click, etc.
 * Google Adwords Account
 * Two different views to show results.
@@ -27,8 +25,7 @@ Major new features in Google Rank Checker - SEO Tool with Google API 4.6.0 inclu
 * Turn on/off Automatic Scheduled Updates (new)
 * Turn on/off Admin Leads after Updating (new) 
 
-
-PS: You'll need an [Google API key] and a [Google Adwords Account] in order to use it properly.
+PS: You will need a Google API key and a Google Adwords Account in order to use this plugin properly.
 
 [Google Rank Checker - SEO Tool with Google API](http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html?utm_source=RankCheckPlugin)
 [Support and Questions](http://www.optimum7.com/contact-us?utm_source=RankCheckPlugin)
@@ -39,7 +36,6 @@ PS: You'll need an [Google API key] and a [Google Adwords Account] in order to u
 2. Adding seo keywords.
 3. Admin results.
 4. Public view
-
 
 == Installation ==
 Upload the Google Rank Checker - SEO Tool with Google API plugin to your blog, Activate it and define a Google AdWords Account.
