@@ -1,178 +1,178 @@
-/* tables */
-
-
-table.tablesorter {
-
-
-	font-family:arial;
-
-
-	background-color: #CDCDCD;
-
-
-	margin:10px 0pt 15px;
-
-
-	font-size: 8pt;
-
-
-	width: 95%;
-
-
-	text-align: left;
-
-
-}
-
-
-table.tablesorter thead tr th, table.tablesorter tfoot tr th {
-
-
-	background-color: #f8da46;
-
-
-	border: 1px solid #ccc;
-
-
-	font-size: 8pt;
-
-
-	padding: 7px;
-
-
-}
-
-
-table.tablesorter thead tr .header {
-
-
-	background-image: url(../images/bg.gif);
-
-
-	background-position:right center;
-
-
-	background-repeat:no-repeat;
-
-
-	cursor:pointer;
-
-
-	font-size:1em;
-
-
-	padding:10px;
-
-
-	background-image: url(../images/bg.gif), -moz-linear-gradient(top, #fbe983, #f8da46); /* FF3.6 */
-
-
-  background-image: url(../images/bg.gif), -ms-linear-gradient(top, #fbe983, #f8da46); /* IE10 */
-
-
-  background-image: url(../images/bg.gif), -o-linear-gradient(top, #fbe983, #f8da46); /* Opera 11.10+ */
-
-
-}
-
-
-
-
-
-
-
-
-table.tablesorter tbody td {
-
-
-	background-color: #FFF;
-
-
-	color:#3D3D3D;
-
-
-	font-size:1.25em;
-
-
-	padding:7px 14px;
-
-
-	vertical-align:top;
-
-
-}
-
-
-table.tablesorter tbody tr.odd td {
-
-
-	background-color:#F0F0F6;
-
-
-}
-
-
-
-
-
-table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
-
-
-background-color: #000;
-
-
-}
-
-
-
-
-
-table.tablesorter thead tr .headerSortUp {
-
-
-	color:#fff;
-
-
-	text-shadow:1px 0 1px #000000; /* FF3.5+, Opera 9+, Saf1+, Chrome */
-
-
-	background-image: url(../images/asc.gif);
-
-
-	background-image: url(../images/asc.gif), -moz-linear-gradient(top, #555, #000); /* FF3.6 */
-
-
-  background-image: url(../images/asc.gif), -ms-linear-gradient(top, #555, #000); /* IE10 */
-
-
-  background-image: url(../images/asc.gif), -o-linear-gradient(top, #555, #000); /* Opera 11.10+ */
-
-
-}
-
-
-table.tablesorter thead tr .headerSortDown {
-
-
-	background-image: url(../images/desc.gif);
-
-
-	color:#fff;
-
-
-	text-shadow:1px 0 1px #000000; /* FF3.5+, Opera 9+, Saf1+, Chrome */
-
-
-	background-image: url(../images/desc.gif);
-
-
-	background-image: url(../images/desc.gif), -moz-linear-gradient(top, #000, #555); /* FF3.6 */
-
-
-  background-image: url(../images/desc.gif), -ms-linear-gradient(top, #000, #555); /* IE10 */
-
-
-  background-image: url(../images/desc.gif), -o-linear-gradient(top, #000, #555); /* Opera 11.10+ */
-
-
+/* tables */
+
+
+table.tablesorter {
+
+
+	font-family:arial;
+
+
+	background-color: #CDCDCD;
+
+
+	margin:10px 0pt 15px;
+
+
+	font-size: 8pt;
+
+
+	width: 95%;
+
+
+	text-align: left;
+
+
+}
+
+
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+
+
+	background-color: #f8da46;
+
+
+	border: 1px solid #ccc;
+
+
+	font-size: 8pt;
+
+
+	padding: 7px;
+
+
+}
+
+
+table.tablesorter thead tr .header {
+
+
+	background-image: url(../images/bg.gif);
+
+
+	background-position:right center;
+
+
+	background-repeat:no-repeat;
+
+
+	cursor:pointer;
+
+
+	font-size:1em;
+
+
+	padding:10px;
+
+
+	background-image: url(../images/bg.gif), -moz-linear-gradient(top, #fbe983, #f8da46); /* FF3.6 */
+
+
+  background-image: url(../images/bg.gif), -ms-linear-gradient(top, #fbe983, #f8da46); /* IE10 */
+
+
+  background-image: url(../images/bg.gif), -o-linear-gradient(top, #fbe983, #f8da46); /* Opera 11.10+ */
+
+
+}
+
+
+
+
+
+
+
+
+table.tablesorter tbody td {
+
+
+	background-color: #FFF;
+
+
+	color:#3D3D3D;
+
+
+	font-size:1.25em;
+
+
+	padding:7px 14px;
+
+
+	vertical-align:top;
+
+
+}
+
+
+table.tablesorter tbody tr.odd td {
+
+
+	background-color:#F0F0F6;
+
+
+}
+
+
+
+
+
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+
+
+background-color: #000;
+
+
+}
+
+
+
+
+
+table.tablesorter thead tr .headerSortUp {
+
+
+	color:#fff;
+
+
+	text-shadow:1px 0 1px #000000; /* FF3.5+, Opera 9+, Saf1+, Chrome */
+
+
+	background-image: url(../images/asc.gif);
+
+
+	background-image: url(../images/asc.gif), -moz-linear-gradient(top, #555, #000); /* FF3.6 */
+
+
+  background-image: url(../images/asc.gif), -ms-linear-gradient(top, #555, #000); /* IE10 */
+
+
+  background-image: url(../images/asc.gif), -o-linear-gradient(top, #555, #000); /* Opera 11.10+ */
+
+
+}
+
+
+table.tablesorter thead tr .headerSortDown {
+
+
+	background-image: url(../images/desc.gif);
+
+
+	color:#fff;
+
+
+	text-shadow:1px 0 1px #000000; /* FF3.5+, Opera 9+, Saf1+, Chrome */
+
+
+	background-image: url(../images/desc.gif);
+
+
+	background-image: url(../images/desc.gif), -moz-linear-gradient(top, #000, #555); /* FF3.6 */
+
+
+  background-image: url(../images/desc.gif), -ms-linear-gradient(top, #000, #555); /* IE10 */
+
+
+  background-image: url(../images/desc.gif), -o-linear-gradient(top, #000, #555); /* Opera 11.10+ */
+
+
 }

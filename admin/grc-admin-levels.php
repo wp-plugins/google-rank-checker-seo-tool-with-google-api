@@ -1,4 +1,4 @@
-   <?
+<?
 $levels = '';	
 if($_POST['submit'] == 'Save Levels'){
 $levels = $_POST['optimum7_google_ranking_checker_levels']; 
@@ -73,7 +73,7 @@ if ($page != $total_pages) { ?>
 </div> <?php
 }?>
 <div style="margin-top:5px;margin-bottom:20px;">
-<table class="widefat" width="auto">
+<table class="widefat" style="width:300px;">
 <thead>
 <tr>
 <th>Level</th>

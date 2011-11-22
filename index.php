@@ -24,9 +24,12 @@
 	define('OPT7_GRC_PLUGINSUPPORT_PATH', 'http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html?utm_source='.OPT7_GRC_UTM_SOURCE_CODE);
 	define('OPT7_GRC_RSS_LINKS',10);
 	define('OPT7_GRC_RSS_URL','http://www.optimum7.com/internet-marketing/feed');
+	define('OPT7_GRC_PLUGIN_PATH', get_bloginfo('wpurl').'/wp-content/plugins/google-rank-checker-seo-tool-with-google-api');
+	
 	_google_ranking_checker::bootstrap();
     add_shortcode('optimum7_google_ranking_checker_form', array('_google_ranking_checker','display'));
 	add_shortcode('optimum7_google_ranking_checker_form_2', array('_google_ranking_checker','display2'));
+	
   /********************************************************************************************************************/	
   class _google_ranking_checker{ 
 	function bootstrap(){ 
@@ -37,10 +40,12 @@
 		// Add the actions 
 		add_action('Opt7_GRC_scheduled',  array('_google_ranking_checker', 'cron_downloading'));		
 		add_action('admin_menu', array('_google_ranking_checker','add_admin_options'));
+		add_action( 'admin_head', array('_google_ranking_checker','opt7_settings_Jqueries'));
     }
     
 	function display(){ 
 	  add_action('wp_footer', array('_google_ranking_checker','add_css'));
+	  add_action('wp_footer', array('_google_ranking_checker','add_document_ready'));
 	  ob_start();
 	  require(OPT7_GRC_PLUGINPATH . '/display.php');
 	  $dl_html = ob_get_contents();
@@ -50,6 +55,7 @@
 	
 	function display2(){ 
 	  add_action('wp_footer', array('_google_ranking_checker','add_css'));
+	  add_action('wp_footer', array('_google_ranking_checker','add_document_ready_2'));
 	  ob_start();
 	  require(OPT7_GRC_PLUGINPATH . '/display-2.php');
 	  $dl_html = ob_get_contents();
@@ -57,12 +63,26 @@
 	  return $dl_html;
 	}
 	
-	function add_admin_options() {	
+	function add_css() {
+		echo '<link type="text/css" rel="stylesheet" href="' .get_bloginfo('wpurl') .'/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/css/style.css" />' . "\n";
+		echo '<script type="text/javascript" src="http://tablesorter.com/jquery-latest.js"></script>' . "\n";	
+		echo '<script type="text/javascript" src="http://autobahn.tablesorter.com/jquery.tablesorter.js" /></script>' . "\n";	
+   }
+   
+   function add_document_ready(){
+   		echo '<script>$(document).ready(function(){
+   				jQuery.tablesorter.addParser({id: "commaDigit",is: function(s, table) { var c = table.config; return jQuery.tablesorter.isDigit(s.replace(/,/g, ""), c);}, format: function(s) {return jQuery.tablesorter.formatFloat(s.replace(/,/g, ""));},type: "numeric"});
+				$("#tablesorter").tablesorter({sortList:[[1,0],[4,0],[2,1]], widgets: ["zebra"],  headers: {5:{sorter:"numeric"},3: {sorter:"commaDigit"}}});});</script>' . "\n";
+   }
+   
+   function add_document_ready_2(){
+		echo '<script type="text/javascript"> $(document).ready(function() { jQuery.tablesorter.addParser({id: "commaDigit",is: function(s, table) { var c = table.config; return jQuery.tablesorter.isDigit(s.replace(/,/g, ""), c);}, format: function(s) {return jQuery.tablesorter.formatFloat(s.replace(/,/g, ""));},type: "numeric"});
+			  $("#tablesorter1").tablesorter({sortList:[[3,1],[1,0],[2,0]], widgets: ["zebra"],  headers: {5:{sorter:"numeric"},3: {sorter:"commaDigit"}}});});</script>' . "\n";
+   }
+   
+   function add_admin_options() {	
 	  ob_end_clean();  
 	  ob_start("ob_gzhandler");
-	  echo '<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>';
-	  echo '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>';
-	  echo '<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>';
 	  add_menu_page ('GRC_Keywords', 'SEO Keywords', 8, 'grc_keywords', array('_google_ranking_checker','grc_menu_keywords'), '/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/images/icon.gif');
 	  add_submenu_page('grc_keywords', "Add_New", "Add new keyword", 8, 'grc_addnew', array('_google_ranking_checker','grc_menu_add_new')); 
 	  add_submenu_page('grc_keywords', "Levels", "Add new Level", 8, 'grc_levels', array('_google_ranking_checker','grc_menu_add_level')); 
@@ -80,25 +100,49 @@
 	function grc_menu_add_level(){
 		require(OPT7_GRC_PLUGINPATH . '/admin/grc-admin-levels.php');
 	}
+	
+	function opt7_settings_Jqueries(){
+		echo '<link type="text/css" rel="stylesheet" href="'.OPT7_GRC_PLUGIN_PATH.'/css/settings.css" />' . "\n";
+		echo '<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css" type="text/css" media="all" />';
+		echo '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+			  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+			  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/i18n/jquery-ui-i18n.min.js" type="text/javascript"></script>';
 
+		?>
+        	<script>	  
+				var url =  "/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/ajax.php";  	
+				jQuery(document).ready(function(){
+					jQuery("#middle-notify").hide();
+					load_rss();
+					$( "#tabs" ).tabs();
+				});
+			
+				function load_rss(){
+					jQuery("#middle-notify").show();
+					jQuery.ajax({
+						type: "POST",
+						url: url,
+						cache: false,
+						data: "commit=load_rss",
+						success: function(ajaxResutl){
+							jQuery( "#opt7_rss" ).html(ajaxResutl);
+							jQuery("#middle-notify").hide(); 
+							},
+						});
+				}
+			</script>
+        <?
+	}
+	
 	function grc_menu_settings() {
-		require(OPT7_GRC_PLUGINPATH . '/admin/grc-admin-keyword-settings.php');
+	  require(OPT7_GRC_PLUGINPATH . '/admin/grc-admin-keyword-settings.php');
 	}	 
-
-	function install(){}
+	
+	function install(){
+	}
 
 	function uninstall(){
 		remove_shortcode('optimum7_google_ranking_checker_form');
 	}
-	
-	function add_css() {
-		wp_enqueue_script('jquery');
-		wp_enqueue_script( 'jquery-ui-tabs' );
-		echo '<link type="text/css" rel="stylesheet" href="' .get_bloginfo('wpurl') .'/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/css/style.css" />' . "\n";
-		echo '<link type="text/css" rel="stylesheet" href="' .get_bloginfo('wpurl') .'/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/css/buttons.css" />' . "\n";
-		echo '<link type="text/css" rel="stylesheet" href="' .get_bloginfo('wpurl') .'/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/css/ui-lightness/jquery-ui-1.8.12.custom.css" />' . "\n";
-		echo '<script type="text/javascript" src="' .get_bloginfo('wpurl') .'/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/include/js/jquery-latest.js" /></script>' . "\n";
-		echo '<script type="text/javascript" src="' .get_bloginfo('wpurl') .'/wp-content/plugins/google-rank-checker-seo-tool-with-google-api/include/js/jquery.tablesorter.js" /></script>' . "\n";	
-   }
   } /*class ends here*/
 ?>

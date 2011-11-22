@@ -1,11 +1,6 @@
 <? require_once(OPT7_GRC_PLUGINPATH . '/classes/collections/GenericDictionary.php');?>
 <? require_once(OPT7_GRC_PLUGINPATH . '/classes/functions.php');?>
 <? get_header();?>
-<script type="text/javascript">  
-	$(document).ready(function(){
-   	jQuery.tablesorter.addParser({id: "commaDigit",is: function(s, table) { var c = table.config; return jQuery.tablesorter.isDigit(s.replace(/,/g, ""), c);}, format: function(s) {return jQuery.tablesorter.formatFloat(s.replace(/,/g, ""));},type: "numeric"});
-	$("#tablesorter").tablesorter({sortList:[[1,0],[4,0],[2,1]], widgets: ['zebra'],  headers: {5:{sorter:'numeric'},3: {sorter:'commaDigit'}}});});
-</script>
 <? 
     try{ 
     	$functions = new functions();
