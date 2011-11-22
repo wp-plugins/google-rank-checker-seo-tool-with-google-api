@@ -1,6 +1,6 @@
 === Google Rank Checker - SEO Tool with Google API ===
 Contributors: jbeaujardin
-Tags: google api, seo api, adwords api, rank checker, keyword position, keyword ranking, seo tool, ranking tool
+Tags: google api, seo api, adwords api, rank checker, keyword position, keyword ranking, seo tool, ranking tool, ajax, tablesorter
 Requires at least: 3.0
 Tested up to: 3.2.2
 Stable tag: 2.5.3
@@ -16,14 +16,23 @@ This plugin is an SEO-tool using the 2011 Google API. A Google AdWords account (
 [Google Rank Checker - SEO Tool with Google API Support](http://www.optimum7.com/internet-marketing/wordpress-2/google-rank-checker-wordpress-plugin-google-api.html?utm_source=RankCheckPlugin)
 
 Major new features in Google Rank Checker - SEO Tool with Google API 5.0.0 include:
+
 * Rules to define: Maximum CPC, The top Google page, Min Cost Per Click, etc.
+
 * Google Adwords Account
+
 * Two different views to show results.
+
 * 2011 Google API
+
 * New keywords can be added dynamically.
+
 * Customized levels for keywords
-* Turn on/off Automatic Scheduled Updates (new)
-* Turn on/off Admin Leads after Updating (new) 
+
+* Jquery Libraries on the Fly
+
+* AJAX,tablesorter, Jquery
+ 
 
 PS: You will need a Google API key and a Google Adwords Account in order to use this plugin properly.
 
