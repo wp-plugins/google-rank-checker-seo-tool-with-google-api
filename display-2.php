@@ -86,7 +86,7 @@
                     }
 					 ?>
 					
-                    <div style="margin-top:10px;margin-bottom:20px;">
+                    <div id="opt7-rank-checker" style="margin-top:10px;margin-bottom:20px;">
                        <table id="tablesorter1" class="tablesorter" border="0" cellpadding="0" cellspacing="1">
                             <thead>
                                 <tr>
